@@ -1,4 +1,4 @@
-// pages/tabs-pages/pkplaform/index.ts
+// pages/video-tutorials-pages/tutorials-list/index.ts
 Page({
 
   /**
@@ -12,7 +12,9 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad() {
-
+    wx.getStorage({key:"toTutorial",success:({data})=>{
+        console.log(data);
+    }})
   },
 
   /**
@@ -25,9 +27,9 @@ Page({
   /**
    * Lifecycle function--Called when page show
    */
-  onShow: function () {
-    this.getTabBar().init();
-},
+  onShow() {
+
+  },
 
   /**
    * Lifecycle function--Called when page hide

@@ -1,1 +1,24 @@
-
+<div class="container">
+  <view class="wx-header">
+    <block class="user-info" wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data class="userAvatarUrl" type="userAvatarUrl"></open-data>
+        <open-data type="userNickName"></open-data>
+      </view>
+    </block>
+  </view>
+  <div class="wx-content">
+    <div class="tutorials" wx:for="{{tutorials}}" wx:key="idx">
+      <div class="labels">{{item.labels}}</div>
+      <div class="video-list">
+        <div class="items" bindtap="goPage" data-item="{{v2}}" wx:for="{{item.items}}" wx:key="idx2" wx:for-item="v2">
+          <van-image width="100" height="100" src="{{v2.url}}" />
+          <div class="title-info">{{v2.title}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+  footer
+  </div>
+</div>

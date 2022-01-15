@@ -14,11 +14,7 @@ Component({
 				text: '作业',
 				url: '/pages/tabs-pages/homework/index'
 			},
-			{
-				icon: 'fire',
-				text: 'PK台',
-				url: '/pages/tabs-pages/pkplaform/index'
-			},
+	
 			{
 				icon: 'manager',
 				text: '我的',

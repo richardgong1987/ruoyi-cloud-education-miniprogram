@@ -15,7 +15,101 @@ Page({
     }
   },
   data: {
-    motto: 'Hello World',
+    tutorials: [
+      {
+        labels: "分级绘本",
+        items: [
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }, {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }
+        ]
+      },
+
+      {
+        labels: "自然拼音绘本",
+        items: [
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }, {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }
+
+
+
+        ]
+      },
+
+      {
+        labels: "英文动画片",
+        items: [
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }, {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }
+
+
+
+        ]
+      },
+
+      {
+        labels: "语法专项训练",
+        items: [
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          },
+          {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }, {
+            title: "RAZ分级绘本 ",
+            url: "https://img.yzcdn.cn/vant/cat.jpeg"
+          }
+
+
+
+        ]
+      },
+
+    ],
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -57,5 +151,15 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  }
+  },
+  goPage(event:any) {
+
+    wx.setStorage({
+      key:"toTutorial",
+      data:event.currentTarget.dataset.item
+    })
+    wx.navigateTo({
+      url: `/pages/video-tutorials-pages/tutorials-list/index`
+    })
+  },
 })

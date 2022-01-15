@@ -1,0 +1,51 @@
+.wx-header {
+  padding: 15rpx;
+  padding-top: 0;
+
+  .user-info {
+    display: flex;
+  }
+
+  .userinfo-avatar {
+    display: flex;
+
+    align-items: center;
+
+    .userAvatarUrl {
+      width: 100rpx;
+      padding-right: 15rpx;
+    }
+  }
+}
+
+.tutorials {
+  .labels {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    padding: 15rpx;
+    border-radius: 10rpx;
+    margin-top: 15rpx;
+  }
+
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .items{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 0 0 33.3%;
+      padding-top: 15rpx;
+    }
+  }
+}
+.footer{
+  display: flex;
+  margin-top: 100rpx;
+
+}
