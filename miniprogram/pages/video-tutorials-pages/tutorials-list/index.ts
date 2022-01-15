@@ -5,9 +5,34 @@ Page({
    * Page initial data
    */
   data: {
-
+    items: [
+      {
+        title: "RAZ分级绘本 ",
+        url: "https://img.yzcdn.cn/vant/cat.jpeg"
+      },
+      {
+        title: "RAZ分级绘本 ",
+        url: "https://img.yzcdn.cn/vant/cat.jpeg"
+      },
+      {
+        title: "RAZ分级绘本 ",
+        url: "https://img.yzcdn.cn/vant/cat.jpeg"
+      }, {
+        title: "RAZ分级绘本 ",
+        url: "https://img.yzcdn.cn/vant/cat.jpeg"
+      }
+    ]
   },
+  goPage(event:any) {
 
+    wx.setStorage({
+      key:"readVideo",
+      data:event.currentTarget.dataset.item
+    });
+    wx.navigateTo({
+      url: `/pages/video-tutorials-pages/read-video/index`
+    })
+  },
   /**
    * Lifecycle function--Called when page load
    */

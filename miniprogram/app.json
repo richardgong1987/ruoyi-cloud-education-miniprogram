@@ -28,7 +28,8 @@
     "pages/logs/logs",
     "pages/tabs-pages/homework/index",
     "pages/tabs-pages/me/index",
-    "pages/video-tutorials-pages/tutorials-list/index"
+    "pages/video-tutorials-pages/tutorials-list/index",
+    "pages/video-tutorials-pages/read-video/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

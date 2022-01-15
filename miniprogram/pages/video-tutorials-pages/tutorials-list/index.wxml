@@ -1,3 +1,6 @@
-<!--pages/video-tutorials-pages/tutorials-list/index.wxml-->
-<text>pages/video-tutorials-pages/tutorials-list/index.wxml</text>
-
+<div class="video-list">
+        <div class="items" bindtap="goPage" data-item="{{v2}}" wx:for="{{items}}" wx:key="idx2" wx:for-item="v2">
+          <van-image width="100" height="100" src="{{v2.url}}" />
+          <div class="title-info">{{v2.title}}</div>
+        </div>
+      </div>
